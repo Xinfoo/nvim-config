@@ -79,3 +79,7 @@ map("t", "<C-l>", [[<Cmd>wincmd l<CR>]], "切换到右侧窗口")
 -- 可视模式编辑
 map("v", "J", ":m '>+1<CR>gv=gv", "向下移动选中行")
 map("v", "K", ":m '<-2<CR>gv=gv", "向上移动选中行")
+
+-- mini.surround 默认键位（无需 Leader）：sa 添加、sd 删除、sr 替换、
+-- sf/sF 向右/向左查找、sh 高亮。sa 支持普通和可视模式，其余为普通模式。
+-- 懒加载触发键在 lua/plugins/mini-surround.lua 声明，实际映射由插件创建。

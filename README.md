@@ -16,6 +16,7 @@
 - `telescope.nvim` 提供文件查找、全文搜索、Buffer 与帮助文档检索。
 - `mason.nvim` + `mason-lspconfig.nvim` 管理 LSP 服务。
 - `blink.cmp` 提供 LSP、路径、片段和 Buffer 补全。
+- `mini.surround` 使用默认快捷键添加、删除、替换和查找包围符号，首次使用快捷键时加载。
 - `gitsigns.nvim` 显示 Git 行级变更。
 - `toggleterm.nvim` 提供浮动终端。
 - 包含 Neovide 的 GUI 字体、透明度和主题配置。
@@ -170,6 +171,28 @@ Leader 键是空格，Local Leader 是反斜杠 `\`。
 | `]d` | 跳到下一个诊断 |
 | `[d` | 跳到上一个诊断 |
 
+### 包围符号（mini.surround）
+
+保留插件默认键位，以下快捷键均不需要 Leader。首次按键时会自动加载插件。
+
+| 快捷键 | 模式 | 功能 |
+| --- | --- | --- |
+| `sa` | 普通、可视 | 添加包围符号 |
+| `sd` | 普通 | 删除包围符号 |
+| `sr` | 普通 | 替换包围符号 |
+| `sf` / `sF` | 普通 | 向右 / 向左查找包围符号 |
+| `sh` | 普通 | 高亮包围符号 |
+
+常用示例：
+
+- `saiw)`：给当前单词加上圆括号，例如 `word` → `(word)`。
+- 选中文本后按 `sa)`：给选区加上圆括号。
+- `sd)`：删除圆括号。
+- `sr)"`：将圆括号替换为双引号。
+
+这些映射以 `s` 开头，使用原生 `s` 命令时可能需要等待后续按键。
+懒加载触发键放在 `lua/plugins/mini-surround.lua`，实际映射由插件默认配置创建。
+
 ### 终端与可视模式
 
 | 快捷键 | 功能 |
@@ -214,7 +237,7 @@ require("config.proxy")
 ## 自定义
 
 - 基础编辑行为放在 `lua/config/settings.lua`。
-- 快捷键放在 `lua/config/keymaps.lua`。
+- 通用快捷键放在 `lua/config/keymaps.lua`；需要触发插件懒加载的快捷键放在对应的 `lua/plugins/` 文件中，例如 `mini-surround.lua`。
 - 插件声明放在 `lua/plugins/`，新增插件时建议单独建一个 Lua 文件。
 - 插件初始化和较集中化的配置目前放在 `lua/config/settings.lua`。
 
