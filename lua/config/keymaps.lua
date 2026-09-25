@@ -70,7 +70,6 @@ map("n", "]d", vim.diagnostic.goto_next, "下一个诊断")
 map("n", "[d", vim.diagnostic.goto_prev, "上一个诊断")
 
 -- 终端
-map("n", "<leader>tt", "<cmd>ToggleTerm<CR>", "打开或关闭浮动终端")
 map("t", "<Esc>", [[<C-\><C-n>]], "退出终端插入模式")
 map("t", "<C-h>", [[<Cmd>wincmd h<CR>]], "切换到左侧窗口")
 map("t", "<C-j>", [[<Cmd>wincmd j<CR>]], "切换到下方窗口")

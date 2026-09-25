@@ -1,4 +1,6 @@
 return {
     "nvim-mini/mini.pairs",
-    version = false
+    version = false,
+    event = "InsertEnter",
+    opts = {},
 }
