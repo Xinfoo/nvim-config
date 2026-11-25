@@ -69,7 +69,7 @@ map("n", "<leader>ll", "<cmd>Telescope diagnostics<CR>", "查看全部诊断")
 map("n", "]d", vim.diagnostic.goto_next, "下一个诊断")
 map("n", "[d", vim.diagnostic.goto_prev, "上一个诊断")
 
--- 诊断列表（Trouble，官方默认键位）
+-- 诊断列表
 map("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", "诊断列表（Trouble）")
 map("n", "<leader>xX", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", "当前 Buffer 诊断（Trouble）")
 map("n", "<leader>cs", "<cmd>Trouble symbols toggle focus=false<cr>", "符号列表（Trouble）")
