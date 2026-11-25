@@ -33,6 +33,7 @@
 - fd
 - wl-clipboard
 - Node.js / npm
+- tree-sitter-cli
 - make 和 C 编译器，用于构建 `telescope-fzf-native.nvim`
 - Nerd Font，可选但推荐，用于正常显示图标
 
