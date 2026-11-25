@@ -69,6 +69,14 @@ map("n", "<leader>ll", "<cmd>Telescope diagnostics<CR>", "查看全部诊断")
 map("n", "]d", vim.diagnostic.goto_next, "下一个诊断")
 map("n", "[d", vim.diagnostic.goto_prev, "上一个诊断")
 
+-- 诊断列表（Trouble，官方默认键位）
+map("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", "诊断列表（Trouble）")
+map("n", "<leader>xX", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", "当前 Buffer 诊断（Trouble）")
+map("n", "<leader>cs", "<cmd>Trouble symbols toggle focus=false<cr>", "符号列表（Trouble）")
+map("n", "<leader>cl", "<cmd>Trouble lsp toggle focus=false win.position=right<cr>", "LSP 定义与引用（Trouble）")
+map("n", "<leader>xL", "<cmd>Trouble loclist toggle<cr>", "Location List（Trouble）")
+map("n", "<leader>xQ", "<cmd>Trouble qflist toggle<cr>", "Quickfix 列表（Trouble）")
+
 -- 终端
 map("t", "<Esc>", [[<C-\><C-n>]], "退出终端插入模式")
 map("t", "<C-h>", [[<Cmd>wincmd h<CR>]], "切换到左侧窗口")
