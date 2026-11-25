@@ -7,6 +7,7 @@ return {
             "clangd",
             "jdtls",
             "bashls",
+            "neocmake",
         },
     },
     dependencies = {
